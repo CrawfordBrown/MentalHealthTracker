@@ -14,7 +14,7 @@ import com.github.florent37.viewanimator.ViewAnimator;
 
 public class Breathe extends AppCompatActivity {
     ImageView breathSpiral, mBackButton;
-    TextView breathText;
+    TextView breathText, breathText2, breathText3;
     Button startBtn;
 
     @Override
@@ -24,10 +24,12 @@ public class Breathe extends AppCompatActivity {
 
         breathSpiral = findViewById(R.id.breatheImage);
         breathText = findViewById(R.id.breathGuide);
+        breathText2 = findViewById(R.id.breathGuide2);
+        breathText3 = findViewById(R.id.breathText);
         startBtn = findViewById(R.id.startBtn);
         mBackButton = findViewById(R.id.backBtn2);
 
-        startBreahingTextIntro();
+        startBreathingTextIntro();
 
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,8 +55,15 @@ public class Breathe extends AppCompatActivity {
                 .onStart(new AnimationListener.Start() {
                     @Override
                     public void onStart() {
-                        breathText.setText("Inhale...Exhale");
+                        breathText.setVisibility(View.VISIBLE);
+                        breathText2.setVisibility(View.VISIBLE);
+                        breathText.setText("Inhale");
+                        breathText2.setText("Exhale");
                         startBtn.setVisibility(View.INVISIBLE);
+                        breathText3.setVisibility(View.INVISIBLE);
+
+
+
                     }
                 })
                 .decelerate()
@@ -62,39 +71,58 @@ public class Breathe extends AppCompatActivity {
                 .thenAnimate(breathSpiral)
                 .scale(0.02f, 1.5f, 0.02f)
                 .rotation(180)
-                .repeatCount(1)
+                .repeatCount(9)
                // .accelerate()
-                .duration(5000)
+                .duration(6500)
+
+                .andAnimate(breathText)
+                .scale(.02f, 1.2f, 0.2f)
+                .duration(6500)
+
+
+                .andAnimate(breathText2)
+                .scale(1.2f, 0.2f, 1.2f)
+                .duration(6500)
                 .onStop(new AnimationListener.Stop() {
                     @Override
                     public void onStop() {
-                        breathText.setText("Well done");
+                        breathText.setVisibility(View.INVISIBLE);
+                        breathText2.setVisibility(View.INVISIBLE);
                         breathSpiral.setScaleX(1.0f);
                         breathSpiral.setScaleY(1.0f);
                         startBtn.setVisibility(View.VISIBLE);
                         startBtn.setText("Breathe again");
+                        breathText3.setText("Well done!");
+                        breathText3.setVisibility(View.VISIBLE);
+
 
                     }
                 })
+
                 .start();
 
 
     }
 
-    private void startBreahingText() {
+//    private void startBreathingText() {
+//
+//        ViewAnimator
+//                .animate(breathText)
+//                .scale(0f, 1f, 0f)
+//                .duration(5000);
+//
+//    }
 
-    }
-
-    private void startBreahingTextIntro() {
+    private void startBreathingTextIntro() {
 
         ViewAnimator
-                .animate(breathText)
+                .animate(breathText3)
                 .scale(0f, 1f)
                 .duration(1500)
                 .onStart(new AnimationListener.Start() {
                     @Override
                     public void onStart() {
-                        breathText.setText("Lets take 10 breaths");
+                        breathText3.setText("Lets take 10 breaths");
                     }
                 })
                 .start();
