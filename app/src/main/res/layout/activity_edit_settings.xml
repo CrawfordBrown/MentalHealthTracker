@@ -12,10 +12,11 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/chelsea_market"
+        android:fontFamily="@font/architects_daughter"
         android:text="Happiness Tracker"
         android:textColor="#982323"
         android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -32,6 +33,7 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -40,7 +42,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/EmailIcon"
         android:layout_width="60dp"
         android:layout_height="73dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +54,7 @@
         app:srcCompat="@drawable/email" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/userIcon"
         android:layout_width="60dp"
         android:layout_height="73dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -64,7 +66,7 @@
         app:srcCompat="@drawable/user" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/phoneIcon"
         android:layout_width="60dp"
         android:layout_height="73dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -92,8 +94,11 @@
         android:layout_width="262dp"
         android:layout_height="73dp"
         android:ems="10"
+        android:fontFamily="@font/architects_daughter"
         android:inputType="textPersonName"
         android:text="Name"
+        android:textColor="#A42D2D"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
@@ -106,8 +111,11 @@
         android:layout_width="262dp"
         android:layout_height="73dp"
         android:ems="10"
+        android:fontFamily="@font/architects_daughter"
         android:inputType="textPersonName"
         android:text="Email"
+        android:textColor="#A42D2D"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
@@ -120,8 +128,11 @@
         android:layout_width="262dp"
         android:layout_height="73dp"
         android:ems="10"
+        android:fontFamily="@font/architects_daughter"
         android:inputType="textPersonName"
         android:text="Phone"
+        android:textColor="#A42D2D"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MentalHealthTracker">
         <activity
+            android:name=".Breathe"
+            android:exported="false" />
+        <activity
             android:name=".EditSettings"
             android:exported="false" />
         <activity

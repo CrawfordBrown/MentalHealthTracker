@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView mLogOut, mSetting;
+    ImageView mLogOut, mSetting, mBreathe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         mLogOut = findViewById(R.id.logout);
         mSetting = findViewById(R.id.settings);
+        mBreathe = findViewById(R.id.meditateBtn);
 
         mLogOut.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -35,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), Settings.class));
+                finish();
+            }
+        });
+
+        mBreathe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Breathe.class));
                 finish();
             }
         });

@@ -27,7 +27,6 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     compileSdkVersion 31
-    buildToolsVersion '30.0.2'
 }
 
 dependencies {
@@ -37,6 +36,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'com.google.firebase:firebase-auth:21.0.2'
     implementation 'com.google.firebase:firebase-firestore:24.0.2'
+    implementation 'com.github.florent37:viewanimator:1.1.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

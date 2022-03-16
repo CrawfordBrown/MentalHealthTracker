@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -24,6 +25,7 @@ public class EditSettings extends AppCompatActivity {
 
     EditText sFullName, sEmail, sPhone;
     Button saveBtn;
+    ImageView sBackBtn;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     FirebaseUser user;
@@ -46,6 +48,7 @@ public class EditSettings extends AppCompatActivity {
         sEmail = findViewById(R.id.editEmail);
         sPhone = findViewById(R.id.editPhone);
         saveBtn = findViewById(R.id.saveSettingBtn);
+        sBackBtn = findViewById(R.id.backBtn1);
 
         sFullName.setText(fullName);
         sEmail.setText(email);
@@ -68,17 +71,17 @@ public class EditSettings extends AppCompatActivity {
                         DocumentReference docRef = fStore.collection("Users").document(user.getUid());
                         Map<String, Object> edited = new HashMap<>();
                         edited.put("fName", sFullName.getText().toString());
-                        edited.put("email", sEmail);
+                        edited.put("email", email);
                         edited.put("phone", sPhone.getText().toString());
                         docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
                                 Toast.makeText(EditSettings.this, "Settings Updated", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(getApplicationContext(), Settings.class));
-                              //  finish();
+                                finish();
                             }
                         });
-                        Toast.makeText(EditSettings.this, "Email is updated", Toast.LENGTH_SHORT).show();
+                      //  Toast.makeText(EditSettings.this, "Email is updated", Toast.LENGTH_SHORT).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -86,6 +89,13 @@ public class EditSettings extends AppCompatActivity {
                         Toast.makeText(EditSettings.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
+            }
+        });
+
+        sBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Settings.class));
             }
         });
 
