@@ -60,7 +60,7 @@
         app:layout_constraintVertical_bias="0.887" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/QuestionBtn"
         android:layout_width="150dp"
         android:layout_height="117dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -110,7 +110,7 @@
         android:layout_width="150dp"
         android:layout_height="22dp"
         android:fontFamily="@font/architects_daughter"
-        android:text="Last seven days"
+        android:text="Results"
         android:textAlignment="center"
         android:textColor="#A52A2A"
         android:textSize="16sp"
@@ -152,7 +152,7 @@
         app:srcCompat="@drawable/breath2" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/InfoBtn"
         android:layout_width="150dp"
         android:layout_height="117dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -164,7 +164,7 @@
         app:srcCompat="@drawable/info" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/Results"
         android:layout_width="150dp"
         android:layout_height="117dp"
         app:layout_constraintBottom_toBottomOf="parent"

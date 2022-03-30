@@ -12,6 +12,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MentalHealthTracker">
         <activity
+            android:name=".Suggestion"
+            android:exported="false" />
+        <activity
+            android:name=".Info"
+            android:exported="false" />
+        <activity
+            android:name=".Results"
+            android:exported="false" />
+        <activity
+            android:name=".Question5"
+            android:exported="false" />
+        <activity
+            android:name=".Question4"
+            android:exported="false" />
+        <activity
+            android:name=".Question3"
+            android:exported="false" />
+        <activity
+            android:name=".Question2"
+            android:exported="false" />
+        <activity
+            android:name=".Question1"
+            android:exported="false" />
+        <activity
             android:name=".Breathe"
             android:exported="false" />
         <activity

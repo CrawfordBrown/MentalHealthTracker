@@ -77,7 +77,6 @@ public class Settings extends AppCompatActivity {
                 startActivity(i);
 
             }
-
         });
 
         //reset password

@@ -3,13 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1285" />
+        <entry key="app/src/main/res/drawable/seek.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/seek_style.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_breath.xml" value="0.3976449275362319" />
         <entry key="app/src/main/res/layout/activity_breathe.xml" value="0.2558876811594203" />
         <entry key="app/src/main/res/layout/activity_edit_settings.xml" value="0.3976449275362319" />
+        <entry key="app/src/main/res/layout/activity_info.xml" value="0.4244791666666667" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2572463768115942" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_question1.xml" value="0.31567028985507245" />
+        <entry key="app/src/main/res/layout/activity_question2.xml" value="0.31567028985507245" />
+        <entry key="app/src/main/res/layout/activity_question3.xml" value="0.31567028985507245" />
+        <entry key="app/src/main/res/layout/activity_question4.xml" value="0.31567028985507245" />
+        <entry key="app/src/main/res/layout/activity_question5.xml" value="0.31567028985507245" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_results.xml" value="0.31567028985507245" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_suggestion.xml" value="0.4244791666666667" />
       </map>
     </option>
   </component>

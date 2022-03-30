@@ -97,10 +97,18 @@ public class Register extends AppCompatActivity {
                             userID = fAuth.getCurrentUser().getUid();
                             //Store user details in firebaseStore
                             DocumentReference documentReference = fStore.collection("Users").document(userID);
+                            DocumentReference documentReference2 = fStore.collection("Users").document(userID).collection("Results").document("Results");
+
                             Map<String, Object> user = new HashMap<>();
                             user.put("fName", fullName);
                             user.put("email", email);
                             user.put("phone", phone);
+                            Map<String, Object> updated = new HashMap<>();
+                            updated.put("HappinessResult", 0);
+                            updated.put("ProductivityResult", 0);
+                            updated.put("PeopleMetResult", 0);
+                            updated.put("OutsideResult", "");
+                            updated.put("ExerciseResult", "");
                             //Check user info was successfully stored
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
@@ -108,6 +116,13 @@ public class Register extends AppCompatActivity {
                                     Log.d(TAG, "onSuccess: User profile created for " + userID);
                                 }
                             });
+                            documentReference2.set(updated).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+                                    Log.d(TAG, "Results table created for " + userID);
+                                }
+                            });
+
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         } else {
                             Toast.makeText(Register.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
